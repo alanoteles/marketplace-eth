@@ -1,6 +1,7 @@
 import {Curriculum, CourseHero, Keypoints} from "@components/course";
 import { Modal } from "@components/common"
 import {BaseLayout} from "@components/layout";
+import Home from "@app/page";
 
 
 export default function Page() {

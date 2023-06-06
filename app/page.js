@@ -1,17 +1,16 @@
-import {Hero, Breadcrumbs} from "@components/common";
-import { EthRates, WalletBar } from "@components/web3";
+import { Hero } from "@components/common";
 import { CourseList } from "@components/course";
-import { OrderCard } from "@components/order";
 import { BaseLayout } from "@components/layout";
+import { getAllCourses } from "@content/courses/fetcher";
+// import type { GetStaticProps } from "next"
 
-export default function Home() {
+export default function Home({courses}) {
+  const staticData = getAllCourses().data
+
   return (
       <BaseLayout>
         <Hero />
-        <Breadcrumbs />
-        <EthRates />
-        <WalletBar />
-        <OrderCard />
+        { JSON.stringify(staticData) }
         <CourseList />
       </BaseLayout>
   )
